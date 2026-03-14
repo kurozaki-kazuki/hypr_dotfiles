@@ -1,0 +1,83 @@
+* {
+    bg: rgba(0,0,0,0.35);
+    bg-alt: rgba(0,0,0,0.25);
+    fg: #E6E6E6;
+    border: rgba(255,255,255,0.12);
+    font: "RobotoMono 12";
+}
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    width: 600px;
+
+    background-color: @bg;
+    border: 2px;
+    border-radius: 7px;
+    border-color: @border;
+    padding: 18px;
+}
+
+mainbox {
+    background-color: transparent;
+}
+
+inputbar {
+    children: [ entry ];
+    background-color: transparent;
+    border: 0px;
+    padding: 4px 6px;
+}
+
+entry {
+    placeholder:"Search...";
+    background-color: transparent;
+    text-color: @fg;
+    cursor-width: 1px;
+    hide-cursor-on-empty: false;
+}
+
+listview {
+    lines: 6;
+    dynamic: false;
+    background-color: transparent;
+    spacing: 6px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+element selected {
+    background-color: rgba(255,255,255,0.15);
+}
+/* force kill GTK white rows */
+element normal.normal {
+    background-color: transparent;
+    text-color: #E6E6E6;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: #E6E6E6;
+}
+
+element selected.normal {
+    background-color: rgba(255,255,255,0.15);
+    text-color: #FFFFFF;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: transparent;
+}
+prompt {
+    enabled: false;
+}
